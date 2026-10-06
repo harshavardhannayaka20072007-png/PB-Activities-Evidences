@@ -1,0 +1,1983 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>T S Harshavardhan Nayaka — Student Developer Portfolio | B.Tech CSIT</title>
+  <meta name="description" content="Academic and Technical Portfolio of T S Harshavardhan Nayaka, 3rd Semester B.Tech CSIT Student at REVA University." />
+  
+  <!-- Google Fonts: Inter & JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+  <style>
+    /* ==========================================================================
+       1. SOFT PROFESSIONAL TECH DESIGN SYSTEM
+       ========================================================================== */
+    :root {
+      /* Theme Palette */
+      --bg-main: #F6F8FB;
+      --bg-card: #FFFFFF;
+      --bg-alt: #EEF2F8;
+      
+      --text-primary: #172033;
+      --text-secondary: #667085;
+      --text-muted: #8896AB;
+      
+      --accent-primary: #4F6FAD;
+      --accent-hover: #3D5C96;
+      --accent-soft: #DCE6F7;
+      --accent-light: #F0F4FA;
+      
+      --border-color: #E4E8EF;
+      --border-hover: #C5D5F0;
+      
+      /* Shadows */
+      --shadow-sm: 0 2px 8px rgba(23, 32, 51, 0.04);
+      --shadow-md: 0 6px 20px rgba(23, 32, 51, 0.06);
+      --shadow-lg: 0 12px 32px rgba(23, 32, 51, 0.08);
+      
+      /* Geometry & Radii */
+      --radius-sm: 6px;
+      --radius-md: 10px;
+      --radius-lg: 16px;
+      --radius-full: 9999px;
+      
+      /* Typography */
+      --font-sans: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+      --font-code: 'JetBrains Mono', monospace;
+      
+      /* Transitions */
+      --transition-fast: 0.15s ease;
+      --transition-normal: 0.25s ease;
+      --transition-slow: 0.4s ease;
+    }
+
+    /* Reset & Base Setup */
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      font-size: 16px;
+    }
+
+    body {
+      font-family: var(--font-sans);
+      background-color: var(--bg-main);
+      color: var(--text-primary);
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      overflow-x: hidden;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    ul, ol {
+      list-style: none;
+    }
+
+    /* Container Utility */
+    .container {
+      width: 100%;
+      max-width: 1140px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
+
+    .section {
+      padding: 5.5rem 0;
+      position: relative;
+    }
+
+    .section-alt {
+      background-color: #F0F4FA;
+      border-top: 1px solid var(--border-color);
+      border-bottom: 1px solid var(--border-color);
+    }
+
+    /* Section Header Component */
+    .section-header {
+      margin-bottom: 3rem;
+    }
+
+    .section-header.text-center {
+      text-align: center;
+    }
+
+    .section-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      font-size: 0.775rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--accent-primary);
+      background-color: var(--accent-soft);
+      padding: 0.35rem 0.85rem;
+      border-radius: var(--radius-full);
+      margin-bottom: 0.75rem;
+      border: 1px solid rgba(79, 111, 173, 0.2);
+    }
+
+    .section-title {
+      font-size: 2.15rem;
+      font-weight: 800;
+      color: var(--text-primary);
+      letter-spacing: -0.025em;
+      line-height: 1.25;
+    }
+
+    .section-description {
+      font-size: 1.025rem;
+      color: var(--text-secondary);
+      max-width: 680px;
+      margin: 0.6rem 0 0 0;
+    }
+
+    .section-header.text-center .section-description {
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    /* Card Component Base */
+    .card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-lg);
+      padding: 1.75rem;
+      box-shadow: var(--shadow-sm);
+      transition: transform var(--transition-normal), box-shadow var(--transition-normal), border-color var(--transition-normal);
+    }
+
+    .card:hover {
+      border-color: var(--border-hover);
+      box-shadow: var(--shadow-md);
+    }
+
+    /* Buttons & Links */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.55rem;
+      padding: 0.7rem 1.4rem;
+      font-size: 0.9rem;
+      font-weight: 600;
+      border-radius: var(--radius-md);
+      transition: all var(--transition-fast);
+      cursor: pointer;
+      border: 1px solid transparent;
+      text-decoration: none;
+      white-space: nowrap;
+    }
+
+    .btn-primary {
+      background-color: var(--accent-primary);
+      color: #FFFFFF;
+      box-shadow: 0 3px 10px rgba(79, 111, 173, 0.25);
+    }
+
+    .btn-primary:hover {
+      background-color: var(--accent-hover);
+      transform: translateY(-1px);
+      box-shadow: 0 5px 14px rgba(79, 111, 173, 0.35);
+    }
+
+    .btn-outline {
+      background-color: #FFFFFF;
+      color: var(--accent-primary);
+      border-color: var(--border-hover);
+    }
+
+    .btn-outline:hover {
+      background-color: var(--accent-soft);
+      border-color: var(--accent-primary);
+      color: var(--accent-hover);
+      transform: translateY(-1px);
+    }
+
+    .btn-sm {
+      padding: 0.45rem 0.9rem;
+      font-size: 0.825rem;
+      border-radius: var(--radius-sm);
+    }
+
+    /* Scroll Reveal Animation */
+    .reveal {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.5s ease, transform 0.5s ease;
+    }
+
+    .reveal.active {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* ==========================================================================
+       2. NAVIGATION BAR
+       ========================================================================== */
+    .navbar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 1000;
+      background: rgba(246, 248, 251, 0.94);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border-color);
+      transition: all var(--transition-normal);
+    }
+
+    .nav-container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 4.25rem;
+    }
+
+    .nav-brand {
+      display: flex;
+      align-items: center;
+      gap: 0.65rem;
+      font-weight: 700;
+      font-size: 1.05rem;
+      color: var(--text-primary);
+      letter-spacing: -0.01em;
+    }
+
+    .nav-brand-badge {
+      width: 2.1rem;
+      height: 2.1rem;
+      background-color: var(--accent-primary);
+      color: #FFFFFF;
+      border-radius: var(--radius-sm);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.85rem;
+      font-weight: 800;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 0.25rem;
+    }
+
+    .nav-link {
+      padding: 0.45rem 0.75rem;
+      font-size: 0.825rem;
+      font-weight: 600;
+      color: var(--text-secondary);
+      border-radius: var(--radius-sm);
+      transition: all var(--transition-fast);
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+    }
+
+    .nav-link:hover,
+    .nav-link.active {
+      color: var(--accent-primary);
+      background-color: var(--accent-soft);
+    }
+
+    .mobile-menu-btn {
+      display: none;
+      background: none;
+      border: 1px solid var(--border-color);
+      color: var(--text-primary);
+      width: 2.4rem;
+      height: 2.4rem;
+      border-radius: var(--radius-sm);
+      font-size: 1.1rem;
+      cursor: pointer;
+      align-items: center;
+      justify-content: center;
+    }
+
+    /* Mobile Dropdown Menu */
+    .mobile-menu {
+      display: none;
+      position: absolute;
+      top: 4.25rem;
+      left: 0;
+      right: 0;
+      background: #FFFFFF;
+      border-bottom: 1px solid var(--border-color);
+      box-shadow: var(--shadow-md);
+      padding: 1rem 1.5rem;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+
+    .mobile-menu.open {
+      display: flex;
+    }
+
+    .mobile-menu .nav-link {
+      padding: 0.65rem 0.9rem;
+      font-size: 0.9rem;
+      width: 100%;
+    }
+
+    /* ==========================================================================
+       3. HERO SECTION
+       ========================================================================== */
+    .hero-section {
+      padding-top: 8rem;
+      padding-bottom: 5.5rem;
+      background: linear-gradient(180deg, #EDF2FA 0%, #F6F8FB 100%);
+      border-bottom: 1px solid var(--border-color);
+      position: relative;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: 3rem;
+      align-items: center;
+    }
+
+    .hero-tagline {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--accent-primary);
+      background: #FFFFFF;
+      padding: 0.35rem 0.9rem;
+      border-radius: var(--radius-full);
+      border: 1px solid var(--border-color);
+      margin-bottom: 1.25rem;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .hero-title {
+      font-size: 2.85rem;
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      line-height: 1.15;
+      color: var(--text-primary);
+      margin-bottom: 0.75rem;
+    }
+
+    .hero-subtitle {
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--accent-primary);
+      margin-bottom: 0.35rem;
+    }
+
+    .hero-institution {
+      font-size: 1.05rem;
+      font-weight: 600;
+      color: var(--text-secondary);
+      margin-bottom: 1.5rem;
+    }
+
+    .hero-quote {
+      font-size: 1.05rem;
+      font-style: italic;
+      color: var(--text-secondary);
+      border-left: 3px solid var(--accent-primary);
+      padding-left: 1rem;
+      margin-bottom: 2rem;
+      max-width: 580px;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin-bottom: 2rem;
+    }
+
+    .hero-meta-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid var(--border-color);
+    }
+
+    .hero-meta-item {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .hero-meta-label {
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      font-weight: 600;
+      text-transform: uppercase;
+    }
+
+    .hero-meta-val {
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: var(--text-primary);
+    }
+
+    /* Abstract Tech Visual Widget */
+    .tech-widget-card {
+      background: #FFFFFF;
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-lg);
+      padding: 1.5rem;
+      box-shadow: var(--shadow-md);
+      position: relative;
+    }
+
+    .tech-widget-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding-bottom: 0.85rem;
+      border-bottom: 1px solid var(--border-color);
+      margin-bottom: 1rem;
+    }
+
+    .tech-dots {
+      display: flex;
+      gap: 0.4rem;
+    }
+
+    .tech-dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+    }
+    .tech-dot.red { background: #F87171; }
+    .tech-dot.yellow { background: #FBBF24; }
+    .tech-dot.green { background: #34D399; }
+
+    .tech-widget-title {
+      font-family: var(--font-code);
+      font-size: 0.775rem;
+      color: var(--text-muted);
+    }
+
+    .tech-code-block {
+      font-family: var(--font-code);
+      font-size: 0.825rem;
+      color: var(--text-primary);
+      line-height: 1.7;
+      background: #F8FAFC;
+      padding: 1.25rem;
+      border-radius: var(--radius-md);
+      border: 1px solid var(--border-color);
+    }
+
+    .code-kw { color: #4F6FAD; font-weight: 600; }
+    .code-fn { color: #0284C7; }
+    .code-str { color: #059669; }
+    .code-cm { color: #94A3B8; font-style: italic; }
+
+    /* ==========================================================================
+       4. ABOUT & EDUCATION SECTION
+       ========================================================================== */
+    .about-layout {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 2.5rem;
+    }
+
+    .about-main-card {
+      background: #FFFFFF;
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-lg);
+      padding: 2.25rem;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .about-p {
+      font-size: 1.05rem;
+      color: var(--text-secondary);
+      line-height: 1.8;
+      margin-bottom: 2rem;
+    }
+
+    .learning-section-title {
+      font-size: 0.9rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--accent-primary);
+      margin-bottom: 1rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .learning-cards-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.25rem;
+    }
+
+    .learning-card {
+      background: var(--accent-light);
+      border: 1px solid var(--accent-soft);
+      border-radius: var(--radius-md);
+      padding: 1.25rem;
+      display: flex;
+      align-items: center;
+      gap: 0.85rem;
+    }
+
+    .learning-icon {
+      width: 2.5rem;
+      height: 2.5rem;
+      background: #FFFFFF;
+      color: var(--accent-primary);
+      border-radius: var(--radius-sm);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.1rem;
+      border: 1px solid var(--border-color);
+      flex-shrink: 0;
+    }
+
+    .learning-name {
+      font-size: 0.925rem;
+      font-weight: 700;
+      color: var(--text-primary);
+    }
+
+    /* Education Cards Structure */
+    .education-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.25rem;
+      margin-top: 1.5rem;
+    }
+
+    .edu-card {
+      background: #FFFFFF;
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-md);
+      padding: 1.35rem 1.5rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.35rem;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .edu-title {
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: var(--text-primary);
+    }
+
+    .edu-inst {
+      font-size: 0.925rem;
+      font-weight: 600;
+      color: var(--accent-primary);
+    }
+
+    .edu-detail {
+      font-size: 0.85rem;
+      color: var(--text-secondary);
+    }
+
+    /* ==========================================================================
+       5. PROJECTS SECTION (EXTERNAL WORK)
+       ========================================================================== */
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.75rem;
+    }
+
+    .project-card {
+      background: #FFFFFF;
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-lg);
+      padding: 2rem;
+      box-shadow: var(--shadow-sm);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: transform var(--transition-normal), box-shadow var(--transition-normal);
+    }
+
+    .project-card:hover {
+      transform: translateY(-3px);
+      box-shadow: var(--shadow-md);
+      border-color: var(--border-hover);
+    }
+
+    .project-top {
+      margin-bottom: 1.5rem;
+    }
+
+    .project-header-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 1rem;
+    }
+
+    .project-category-badge {
+      font-size: 0.775rem;
+      font-weight: 700;
+      color: var(--accent-primary);
+      background-color: var(--accent-soft);
+      padding: 0.3rem 0.75rem;
+      border-radius: var(--radius-full);
+    }
+
+    .project-title {
+      font-size: 1.35rem;
+      font-weight: 800;
+      color: var(--text-primary);
+      margin-bottom: 0.75rem;
+      line-height: 1.3;
+    }
+
+    .project-problem {
+      font-size: 0.875rem;
+      font-weight: 600;
+      color: var(--accent-primary);
+      margin-bottom: 0.75rem;
+    }
+
+    .project-desc {
+      font-size: 0.95rem;
+      color: var(--text-secondary);
+      line-height: 1.65;
+    }
+
+    .tech-chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.45rem;
+      margin-top: 1rem;
+    }
+
+    .chip {
+      font-size: 0.775rem;
+      font-weight: 600;
+      padding: 0.25rem 0.65rem;
+      border-radius: var(--radius-sm);
+      background: #F1F5F9;
+      color: var(--text-secondary);
+      border: 1px solid var(--border-color);
+    }
+
+    /* ==========================================================================
+       6. ACADEMIC WORK SECTION
+       ========================================================================== */
+    .academic-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+    }
+
+    .academic-card {
+      background: #FFFFFF;
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-lg);
+      padding: 1.75rem;
+      box-shadow: var(--shadow-sm);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .academic-card:hover {
+      border-color: var(--border-hover);
+      box-shadow: var(--shadow-md);
+    }
+
+    .academic-badge {
+      font-size: 0.75rem;
+      font-weight: 700;
+      color: #3B82F6;
+      background: #EFF6FF;
+      padding: 0.25rem 0.65rem;
+      border-radius: var(--radius-full);
+      display: inline-block;
+      margin-bottom: 0.85rem;
+    }
+
+    .academic-title {
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: var(--text-primary);
+      margin-bottom: 0.65rem;
+      line-height: 1.35;
+    }
+
+    .academic-desc {
+      font-size: 0.9rem;
+      color: var(--text-secondary);
+      line-height: 1.6;
+      margin-bottom: 1rem;
+    }
+
+    .hardware-list {
+      background: #F8FAFC;
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-md);
+      padding: 0.85rem;
+      margin-bottom: 1rem;
+    }
+
+    .hardware-title {
+      font-size: 0.775rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      margin-bottom: 0.4rem;
+    }
+
+    .hardware-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.35rem;
+    }
+
+    .hw-tag {
+      font-size: 0.75rem;
+      font-family: var(--font-code);
+      background: #FFFFFF;
+      padding: 0.2rem 0.5rem;
+      border-radius: 4px;
+      border: 1px solid var(--border-color);
+      color: var(--text-primary);
+    }
+
+    .features-list {
+      list-style: none;
+      margin-bottom: 1rem;
+    }
+
+    .features-list li {
+      font-size: 0.85rem;
+      color: var(--text-secondary);
+      padding: 0.25rem 0;
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+
+    .features-list li i {
+      color: var(--accent-primary);
+      font-size: 0.75rem;
+    }
+
+    /* ==========================================================================
+       7. COURSE PORTFOLIO (TIMELINE)
+       ========================================================================== */
+    .timeline {
+      position: relative;
+      max-width: 860px;
+      margin: 0 auto;
+    }
+
+    .timeline::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 1.5rem;
+      width: 2px;
+      background: var(--accent-soft);
+    }
+
+    .timeline-item {
+      position: relative;
+      padding-left: 4.25rem;
+      margin-bottom: 2rem;
+    }
+
+    .timeline-item:last-child {
+      margin-bottom: 0;
+    }
+
+    .timeline-icon {
+      position: absolute;
+      left: 0.45rem;
+      top: 0.25rem;
+      width: 2.1rem;
+      height: 2.1rem;
+      border-radius: 50%;
+      background: #FFFFFF;
+      border: 2px solid var(--accent-primary);
+      color: var(--accent-primary);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.8rem;
+      font-weight: 700;
+      z-index: 2;
+      box-shadow: 0 0 0 4px var(--bg-main);
+    }
+
+    .timeline-card {
+      background: #FFFFFF;
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-md);
+      padding: 1.35rem 1.5rem;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .timeline-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 0.4rem;
+    }
+
+    .timeline-act-number {
+      font-size: 0.75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--accent-primary);
+    }
+
+    .timeline-title {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--text-primary);
+      margin-bottom: 0.4rem;
+    }
+
+    .timeline-desc {
+      font-size: 0.9rem;
+      color: var(--text-secondary);
+      line-height: 1.55;
+    }
+
+    .timeline-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.65rem;
+      margin-top: 0.85rem;
+    }
+
+    /* ==========================================================================
+       8. EXPERIENCE & EXTERNAL WORK
+       ========================================================================== */
+    .exp-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.75rem;
+    }
+
+    .exp-card {
+      background: #FFFFFF;
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-lg);
+      padding: 2rem;
+      box-shadow: var(--shadow-sm);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .exp-type-badge {
+      font-size: 0.775rem;
+      font-weight: 700;
+      color: #059669;
+      background: #ECFDF5;
+      padding: 0.3rem 0.75rem;
+      border-radius: var(--radius-full);
+      display: inline-block;
+      margin-bottom: 1rem;
+    }
+
+    .exp-role {
+      font-size: 1.3rem;
+      font-weight: 800;
+      color: var(--text-primary);
+      margin-bottom: 0.25rem;
+    }
+
+    .exp-company {
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--accent-primary);
+      margin-bottom: 0.75rem;
+    }
+
+    .exp-meta {
+      display: flex;
+      gap: 1.25rem;
+      font-size: 0.825rem;
+      color: var(--text-muted);
+      margin-bottom: 1rem;
+    }
+
+    .exp-meta-item {
+      display: flex;
+      align-items: center;
+      gap: 0.35rem;
+    }
+
+    .exp-desc {
+      font-size: 0.925rem;
+      color: var(--text-secondary);
+      line-height: 1.6;
+      margin-bottom: 1.25rem;
+    }
+
+    /* ==========================================================================
+       9. SKILLS SECTION
+       ========================================================================== */
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1.5rem;
+    }
+
+    .skill-group-card {
+      background: #FFFFFF;
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-lg);
+      padding: 1.5rem;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .skill-group-title {
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: var(--accent-primary);
+      margin-bottom: 1.25rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding-bottom: 0.65rem;
+      border-bottom: 1px solid var(--border-color);
+    }
+
+    .skill-chips-list {
+      display: flex;
+      flex-direction: column;
+      gap: 0.65rem;
+    }
+
+    .skill-item-chip {
+      display: flex;
+      align-items: center;
+      gap: 0.65rem;
+      padding: 0.6rem 0.85rem;
+      background: var(--bg-main);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-md);
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: var(--text-primary);
+    }
+
+    .skill-item-chip i {
+      color: var(--accent-primary);
+      font-size: 1rem;
+    }
+
+    /* ==========================================================================
+       10. CONNECT SECTION
+       ========================================================================== */
+    .connect-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.25rem;
+    }
+
+    .connect-card {
+      background: #FFFFFF;
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-lg);
+      padding: 1.5rem;
+      box-shadow: var(--shadow-sm);
+      display: flex;
+      align-items: center;
+      gap: 1.15rem;
+      transition: all var(--transition-normal);
+      text-decoration: none;
+    }
+
+    .connect-card:hover {
+      transform: translateY(-3px);
+      border-color: var(--accent-primary);
+      box-shadow: var(--shadow-md);
+    }
+
+    .connect-icon {
+      width: 3.1rem;
+      height: 3.1rem;
+      border-radius: var(--radius-md);
+      background: var(--accent-light);
+      color: var(--accent-primary);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.35rem;
+      border: 1px solid var(--accent-soft);
+      flex-shrink: 0;
+    }
+
+    .connect-info {
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+    }
+
+    .connect-platform {
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: var(--text-muted);
+      text-transform: uppercase;
+    }
+
+    .connect-handle {
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: var(--text-primary);
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    /* ==========================================================================
+       11. FOOTER
+       ========================================================================== */
+    .footer {
+      background: #FFFFFF;
+      border-top: 1px solid var(--border-color);
+      padding: 3rem 0;
+    }
+
+    .footer-container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .footer-brand {
+      font-size: 1.1rem;
+      font-weight: 800;
+      color: var(--text-primary);
+    }
+
+    .footer-sub {
+      font-size: 0.85rem;
+      color: var(--text-secondary);
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 1.25rem;
+    }
+
+    .footer-link {
+      color: var(--text-secondary);
+      font-size: 1.1rem;
+      transition: color var(--transition-fast);
+    }
+
+    .footer-link:hover {
+      color: var(--accent-primary);
+    }
+
+    /* ==========================================================================
+       12. RESPONSIVE BREAKPOINTS
+       ========================================================================== */
+    @media (max-width: 1024px) {
+      .hero-grid {
+        grid-template-columns: 1fr;
+      }
+      .learning-cards-grid {
+        grid-template-columns: 1fr;
+      }
+      .academic-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      .skills-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      .connect-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 768px) {
+      .nav-links {
+        display: none;
+      }
+      .mobile-menu-btn {
+        display: flex;
+      }
+      .hero-title {
+        font-size: 2.2rem;
+      }
+      .projects-grid,
+      .exp-grid,
+      .academic-grid,
+      .education-grid,
+      .connect-grid,
+      .skills-grid {
+        grid-template-columns: 1fr;
+      }
+      .hero-meta-grid {
+        grid-template-columns: 1fr;
+        gap: 0.85rem;
+      }
+      .footer-container {
+        flex-direction: column;
+        gap: 1.5rem;
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ==========================================================================
+       NAVIGATION BAR
+       ========================================================================== -->
+  <nav class="navbar" id="navbar">
+    <div class="container nav-container">
+      <a href="#home" class="nav-brand">
+        <div class="nav-brand-badge">TS</div>
+        <span>T S HARSHAVARDHAN NAYAKA</span>
+      </a>
+
+      <!-- Desktop Nav Items -->
+      <ul class="nav-links">
+        <li><a href="#home" class="nav-link active">HOME</a></li>
+        <li><a href="#about" class="nav-link">ABOUT</a></li>
+        <li><a href="#projects" class="nav-link">PROJECTS</a></li>
+        <li><a href="#academic-work" class="nav-link">ACADEMIC WORK</a></li>
+        <li><a href="#course-portfolio" class="nav-link">COURSE PORTFOLIO</a></li>
+        <li><a href="#experience" class="nav-link">EXPERIENCE</a></li>
+        <li><a href="#skills" class="nav-link">SKILLS</a></li>
+        <li><a href="#connect" class="nav-link">CONNECT</a></li>
+      </ul>
+
+      <!-- Mobile Hamburger Button -->
+      <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle menu">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+    </div>
+
+    <!-- Mobile Navigation Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+      <a href="#home" class="nav-link mobile-link">HOME</a>
+      <a href="#about" class="nav-link mobile-link">ABOUT</a>
+      <a href="#projects" class="nav-link mobile-link">PROJECTS</a>
+      <a href="#academic-work" class="nav-link mobile-link">ACADEMIC WORK</a>
+      <a href="#course-portfolio" class="nav-link mobile-link">COURSE PORTFOLIO</a>
+      <a href="#experience" class="nav-link mobile-link">EXPERIENCE</a>
+      <a href="#skills" class="nav-link mobile-link">SKILLS</a>
+      <a href="#connect" class="nav-link mobile-link">CONNECT</a>
+    </div>
+  </nav>
+
+  <!-- ==========================================================================
+       HERO / HOME SECTION
+       ========================================================================== -->
+  <section class="hero-section" id="home">
+    <div class="container">
+      <div class="hero-grid">
+        <div class="hero-content reveal">
+          <div class="hero-tagline">
+            <i class="fa-solid fa-graduation-cap"></i> Academic & Technical Portfolio
+          </div>
+          <h1 class="hero-title">T S HARSHAVARDHAN NAYAKA</h1>
+          <div class="hero-subtitle">Student Developer | B.Tech CSIT</div>
+          <div class="hero-institution">REVA University</div>
+          
+          <blockquote class="hero-quote">
+            "Building stronger programming skills and becoming more confident in developing real-world projects."
+          </blockquote>
+
+          <div class="hero-actions">
+            <a href="#projects" class="btn btn-primary">
+              <i class="fa-solid fa-folder-open"></i> Explore Projects
+            </a>
+          </div>
+
+          <div class="hero-meta-grid">
+            <div class="hero-meta-item">
+              <span class="hero-meta-label">Current Status</span>
+              <span class="hero-meta-val">3rd Semester Student</span>
+            </div>
+            <div class="hero-meta-item">
+              <span class="hero-meta-label">Degree Major</span>
+              <span class="hero-meta-val">B.Tech CSIT</span>
+            </div>
+            <div class="hero-meta-item">
+              <span class="hero-meta-label">Expected Grad</span>
+              <span class="hero-meta-val">2029</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Subtle Technical Visual Widget -->
+        <div class="hero-visual reveal">
+          <div class="tech-widget-card">
+            <div class="tech-widget-header">
+              <div class="tech-dots">
+                <span class="tech-dot red"></span>
+                <span class="tech-dot yellow"></span>
+                <span class="tech-dot green"></span>
+              </div>
+              <span class="tech-widget-title">developer_profile.c</span>
+            </div>
+            <pre class="tech-code-block"><code><span class="code-cm">// Student Developer Profile</span>
+<span class="code-kw">#include</span> <span class="code-str">&lt;stdio.h&gt;</span>
+
+<span class="code-kw">typedef struct</span> {
+    <span class="code-kw">char</span> name[60];
+    <span class="code-kw">char</span> degree[40];
+    <span class="code-kw">char</span> university[40];
+    <span class="code-kw">int</span> semester;
+} <span class="code-fn">Developer</span>;
+
+<span class="code-kw">int</span> <span class="code-fn">main</span>() {
+    <span class="code-fn">Developer</span> dev = {
+        .<span class="code-fn">name</span> = <span class="code-str">"T S HARSHAVARDHAN NAYAKA"</span>,
+        .<span class="code-fn">degree</span> = <span class="code-str">"B.Tech CSIT"</span>,
+        .<span class="code-fn">university</span> = <span class="code-str">"REVA University"</span>,
+        .<span class="code-fn">semester</span> = 3
+    };
+    <span class="code-fn">printf</span>(<span class="code-str">"Focus: C, Python, C++, MySQL, DS\n"</span>);
+    <span class="code-kw">return</span> 0;
+}</code></pre>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       ABOUT & EDUCATION SECTION
+       ========================================================================== -->
+  <section class="section" id="about">
+    <div class="container">
+      <div class="section-header text-center reveal">
+        <span class="section-badge"><i class="fa-solid fa-user"></i> Background & Education</span>
+        <h2 class="section-title">About Me</h2>
+      </div>
+
+      <div class="about-layout">
+        <!-- Main About Description -->
+        <div class="about-main-card reveal">
+          <p class="about-p">
+            I am a 3rd-semester B.Tech CSIT student at REVA University interested in programming, data science, software development, and emerging technologies. My learning journey includes C and Python, Git and GitHub, coding practice, collaborative development, IoT and academic projects. I am currently strengthening my fundamentals through C++ Object-Oriented Programming, MySQL and Data Structures in C.
+          </p>
+
+          <div class="learning-section-title">
+            <i class="fa-solid fa-book-open-reader"></i> Currently Learning
+          </div>
+
+          <div class="learning-cards-grid">
+            <div class="learning-card">
+              <div class="learning-icon"><i class="fa-solid fa-code"></i></div>
+              <div class="learning-name">C++ — Object-Oriented Programming</div>
+            </div>
+            <div class="learning-card">
+              <div class="learning-icon"><i class="fa-solid fa-database"></i></div>
+              <div class="learning-name">MySQL</div>
+            </div>
+            <div class="learning-card">
+              <div class="learning-icon"><i class="fa-solid fa-sitemap"></i></div>
+              <div class="learning-name">Data Structures in C</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Clean Formal Education Grid -->
+        <div class="reveal">
+          <div class="section-header" style="margin-bottom: 1rem;">
+            <h3 style="font-size: 1.35rem; font-weight: 700; color: var(--text-primary);">Education</h3>
+          </div>
+          <div class="education-grid">
+            <div class="edu-card">
+              <div class="edu-title">B.Tech — Computer Science and Information Technology (CSIT)</div>
+              <div class="edu-inst">REVA University</div>
+              <div class="edu-detail">3rd Semester</div>
+              <div class="edu-detail" style="font-weight: 600; color: var(--text-muted);">Expected Graduation: 2029</div>
+            </div>
+
+            <div class="edu-card">
+              <div class="edu-title">Senior Secondary Education</div>
+              <div class="edu-inst">Kendriya Vidyalaya RWF</div>
+              <div class="edu-detail">CBSE</div>
+              <div class="edu-detail" style="font-weight: 600; color: var(--text-muted);">Class 12</div>
+            </div>
+
+            <div class="edu-card">
+              <div class="edu-title">Secondary Education</div>
+              <div class="edu-inst">Kendriya Vidyalaya RWF</div>
+              <div class="edu-detail">CBSE</div>
+              <div class="edu-detail" style="font-weight: 600; color: var(--text-muted);">Class 10</div>
+            </div>
+
+            <div class="edu-card">
+              <div class="edu-title">Primary & Middle Schooling</div>
+              <div class="edu-inst">Kendriya Vidyalaya RWF</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       PROJECTS SECTION (EXTERNAL TECHNICAL WORK)
+       ========================================================================== -->
+  <section class="section section-alt" id="projects">
+    <div class="container">
+      <div class="section-header text-center reveal">
+        <span class="section-badge"><i class="fa-solid fa-laptop-code"></i> Featured Work</span>
+        <h2 class="section-title">Projects</h2>
+        <p class="section-description">Important external and technical work developed as part of hackathons and independent technical projects.</p>
+      </div>
+
+      <div class="projects-grid">
+        <!-- Project 1: SIH 2026 -->
+        <div class="project-card reveal">
+          <div class="project-top">
+            <div class="project-header-row">
+              <span class="project-category-badge">External Hackathon / Team Project</span>
+            </div>
+            <h3 class="project-title">SIH 2026 — Innovation Procurement Bridge</h3>
+            <div class="project-problem">
+              <i class="fa-solid fa-bullseye"></i> Problem Statement: Startup-Friendly Public Procurement Mechanism for the Government of Maharashtra
+            </div>
+            <p class="project-desc">
+              A proposed digital platform supporting startup-friendly public procurement by connecting government challenges with startups and providing structured application screening, evaluation, pilot execution and milestone tracking.
+            </p>
+          </div>
+          <div class="project-bottom">
+            <a href="https://github.com/harshavardhannayaka20072007-png/innovation-procurement-bridge" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm">
+              <i class="fa-brands fa-github"></i> View GitHub Repository
+            </a>
+          </div>
+        </div>
+
+        <!-- Project 2: Movie Success Rate Prediction -->
+        <div class="project-card reveal">
+          <div class="project-top">
+            <div class="project-header-row">
+              <span class="project-category-badge">Data Science / Technical Project</span>
+            </div>
+            <h3 class="project-title">Movie Success Rate Prediction</h3>
+            <p class="project-desc">
+              A technical project involving exploratory data analysis and predictive modeling workflows to evaluate movie performance metrics and trends using Python data science libraries.
+            </p>
+            <div class="tech-chips">
+              <span class="chip">Python</span>
+              <span class="chip">Data Science</span>
+              <span class="chip">Jupyter Notebook</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       ACADEMIC WORK SECTION
+       ========================================================================== -->
+  <section class="section" id="academic-work">
+    <div class="container">
+      <div class="section-header text-center reveal">
+        <span class="section-badge"><i class="fa-solid fa-microchip"></i> Coursework & Labs</span>
+        <h2 class="section-title">Academic Work</h2>
+        <p class="section-description">Classroom programming activities, lab mini-projects, and academic IoT implementations.</p>
+      </div>
+
+      <div class="academic-grid">
+        <!-- Academic Project 1: IoT -->
+        <div class="academic-card reveal">
+          <div>
+            <span class="academic-badge">Academic Project — IoT</span>
+            <h3 class="academic-title">IoT-Enabled Multi-Parameter Health Monitoring System</h3>
+            <p class="academic-desc">
+              An academic IoT project for monitoring multiple physiological parameters using an ESP32-based system.
+            </p>
+            
+            <div class="hardware-list">
+              <div class="hardware-title">Hardware Components</div>
+              <div class="hardware-tags">
+                <span class="hw-tag">ESP32</span>
+                <span class="hw-tag">MAX30100</span>
+                <span class="hw-tag">AD8232 ECG</span>
+                <span class="hw-tag">0.96" OLED</span>
+              </div>
+            </div>
+
+            <ul class="features-list">
+              <li><i class="fa-solid fa-check"></i> Real-time ECG Waveform</li>
+              <li><i class="fa-solid fa-check"></i> Heart Rate Monitoring</li>
+              <li><i class="fa-solid fa-check"></i> SpO2 Measurement</li>
+              <li><i class="fa-solid fa-check"></i> OLED Display Output</li>
+              <li><i class="fa-solid fa-check"></i> Local Laptop Dashboard</li>
+              <li><i class="fa-solid fa-check"></i> Rule-based Status Logic</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Academic Project 2: ACP Mini Project — 3D Shape Printing -->
+        <div class="academic-card reveal">
+          <div>
+            <span class="academic-badge">Academic Mini Project</span>
+            <h3 class="academic-title">ACP Mini Project — 3D Shape Printing</h3>
+            <p class="academic-desc">
+              An academic C/C++ programming project focused on algorithms for generating, rendering, and printing 3D geometric shapes and patterns within a console interface.
+            </p>
+            <div class="tech-chips">
+              <span class="chip">C Programming</span>
+              <span class="chip">C++</span>
+              <span class="chip">Console Algorithms</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Academic Project 3: Line Editor Programming Activity -->
+        <div class="academic-card reveal">
+          <div>
+            <span class="academic-badge">Class Programming Activity</span>
+            <h3 class="academic-title">Line Editor</h3>
+            <p class="academic-desc">
+              A submitted C programming project implementing a custom terminal-based line editor tool supporting line appending, editing, deletion, buffer display, and menu-driven command navigation.
+            </p>
+            <div class="tech-chips">
+              <span class="chip">C Programming</span>
+              <span class="chip">Data Structures</span>
+              <span class="chip">Line Buffer Handling</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       COURSE PORTFOLIO SECTION (TIMELINE)
+       ========================================================================== -->
+  <section class="section section-alt" id="course-portfolio">
+    <div class="container">
+      <div class="section-header text-center reveal">
+        <span class="section-badge"><i class="fa-solid fa-timeline"></i> Structured Activities</span>
+        <h2 class="section-title">Course Portfolio</h2>
+        <p class="section-description">A complete sequence of practical activities and milestone tasks completed during the course portfolio curriculum.</p>
+      </div>
+
+      <div class="timeline">
+        <!-- Activity 0 -->
+        <div class="timeline-item reveal">
+          <div class="timeline-icon">0</div>
+          <div class="timeline-card">
+            <div class="timeline-header">
+              <span class="timeline-act-number">Activity 0</span>
+            </div>
+            <h3 class="timeline-title">Development Environment Setup</h3>
+            <p class="timeline-desc">Installing and setting up the basic development environment and tools required for programming and Git/GitHub work.</p>
+          </div>
+        </div>
+
+        <!-- Activity 1 -->
+        <div class="timeline-item reveal">
+          <div class="timeline-icon">1</div>
+          <div class="timeline-card">
+            <div class="timeline-header">
+              <span class="timeline-act-number">Activity 1</span>
+            </div>
+            <h3 class="timeline-title">C/C++ Development Environment, PATH & Hello World</h3>
+            <p class="timeline-desc">C/C++ development environment setup, PATH configuration, compiler setup and Hello World program.</p>
+          </div>
+        </div>
+
+        <!-- Activity 2 -->
+        <div class="timeline-item reveal">
+          <div class="timeline-icon">2</div>
+          <div class="timeline-card">
+            <div class="timeline-header">
+              <span class="timeline-act-number">Activity 2</span>
+            </div>
+            <h3 class="timeline-title">VS Code Extensions & Development Tools</h3>
+            <p class="timeline-desc">Python, Java, Prettier, Live Share and GitLens extension setup and exploration.</p>
+          </div>
+        </div>
+
+        <!-- Activity 3 -->
+        <div class="timeline-item reveal">
+          <div class="timeline-icon">3</div>
+          <div class="timeline-card">
+            <div class="timeline-header">
+              <span class="timeline-act-number">Activity 3</span>
+            </div>
+            <h3 class="timeline-title">GitHub Fundamentals</h3>
+            <p class="timeline-desc">Creating a repository, adding README.md, making commits and pushing changes.</p>
+          </div>
+        </div>
+
+        <!-- Activity 4 -->
+        <div class="timeline-item reveal">
+          <div class="timeline-icon">4</div>
+          <div class="timeline-card">
+            <div class="timeline-header">
+              <span class="timeline-act-number">Activity 4</span>
+            </div>
+            <h3 class="timeline-title">Branches, Pull Requests & GitHub Pages</h3>
+            <p class="timeline-desc">Creating a branch, making changes, creating a pull request, merging it and working with GitHub Pages.</p>
+          </div>
+        </div>
+
+        <!-- Activity 5 -->
+        <div class="timeline-item reveal">
+          <div class="timeline-icon">5</div>
+          <div class="timeline-card">
+            <div class="timeline-header">
+              <span class="timeline-act-number">Activity 5</span>
+            </div>
+            <h3 class="timeline-title">GitLens & Live Share Collaboration</h3>
+            <p class="timeline-desc">Hello World collaborative coding using Live Share, GitLens/history and committing/pushing the work.</p>
+          </div>
+        </div>
+
+        <!-- Activity 6 -->
+        <div class="timeline-item reveal">
+          <div class="timeline-icon">6</div>
+          <div class="timeline-card">
+            <div class="timeline-header">
+              <span class="timeline-act-number">Activity 6</span>
+            </div>
+            <h3 class="timeline-title">LeetCode</h3>
+            <p class="timeline-desc">Practicing problem-solving skills, algorithm challenges, and data structure fundamentals.</p>
+            <div class="timeline-links">
+              <a href="https://github.com/harshavardhannayaka20072007-png/leetcode-solutions" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm">
+                <i class="fa-brands fa-github"></i> LeetCode Solutions Repo
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Activity 7 -->
+        <div class="timeline-item reveal">
+          <div class="timeline-icon">7</div>
+          <div class="timeline-card">
+            <div class="timeline-header">
+              <span class="timeline-act-number">Activity 7</span>
+            </div>
+            <h3 class="timeline-title">Line Editor</h3>
+            <p class="timeline-desc">Submitted Line Editor C code implementing line buffer manipulation and menu commands for a class programming activity.</p>
+          </div>
+        </div>
+
+        <!-- Activity 8 -->
+        <div class="timeline-item reveal">
+          <div class="timeline-icon">8</div>
+          <div class="timeline-card">
+            <div class="timeline-header">
+              <span class="timeline-act-number">Activity 8</span>
+            </div>
+            <h3 class="timeline-title">HackerRank</h3>
+            <p class="timeline-desc">Solving foundational programming challenges in C and Python on HackerRank competitive coding platform.</p>
+            <div class="timeline-links">
+              <a href="https://github.com/harshavardhannayaka20072007-png/HackerRank-3rdSem-Portfolio" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm">
+                <i class="fa-brands fa-github"></i> View GitHub Repository
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Activity 9 -->
+        <div class="timeline-item reveal">
+          <div class="timeline-icon">9</div>
+          <div class="timeline-card">
+            <div class="timeline-header">
+              <span class="timeline-act-number">Activity 9</span>
+            </div>
+            <h3 class="timeline-title">LinkedIn</h3>
+            <p class="timeline-desc">Professional networking profile organization and developer connection setup.</p>
+          </div>
+        </div>
+
+        <!-- Activity 10 -->
+        <div class="timeline-item reveal">
+          <div class="timeline-icon">10</div>
+          <div class="timeline-card">
+            <div class="timeline-header">
+              <span class="timeline-act-number">Activity 10</span>
+            </div>
+            <h3 class="timeline-title">Professional Profile Organization</h3>
+            <p class="timeline-desc">Organizing professional and technical developer profiles across platform accounts.</p>
+          </div>
+        </div>
+
+        <!-- Activity 11 -->
+        <div class="timeline-item reveal">
+          <div class="timeline-icon">11</div>
+          <div class="timeline-card">
+            <div class="timeline-header">
+              <span class="timeline-act-number">Activity 11</span>
+            </div>
+            <h3 class="timeline-title">Instagram Branding & Coding Platforms</h3>
+            <p class="timeline-desc">Developing a technical build-in-public Instagram presence (@tsh_tech_07) to share technology updates and coding progress.</p>
+          </div>
+        </div>
+
+        <!-- Activity 12 -->
+        <div class="timeline-item reveal">
+          <div class="timeline-icon">12</div>
+          <div class="timeline-card">
+            <div class="timeline-header">
+              <span class="timeline-act-number">Activity 12</span>
+            </div>
+            <h3 class="timeline-title">AI-Assisted Portfolio Development</h3>
+            <p class="timeline-desc">Utilizing AI assistance to brief, log prompts, build, refine, and reflect on personal developer portfolio site development.</p>
+            <div class="timeline-links">
+              <a href="https://github.com/harshavardhannayaka20072007-png/hello-world-c" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm">
+                <i class="fa-brands fa-github"></i> Hello World C Repo
+              </a>
+              <a href="https://github.com/harshavardhannayaka20072007-png/leetcode-solutions" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm">
+                <i class="fa-brands fa-github"></i> LeetCode Solutions Repo
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Activity 13 -->
+        <div class="timeline-item reveal">
+          <div class="timeline-icon">13</div>
+          <div class="timeline-card">
+            <div class="timeline-header">
+              <span class="timeline-act-number">Activity 13</span>
+            </div>
+            <h3 class="timeline-title">Tech Platforms</h3>
+            <p class="timeline-desc">Exploring developer ecosystem platforms, community engagement, and developer tools.</p>
+          </div>
+        </div>
+
+        <!-- Activity 14 -->
+        <div class="timeline-item reveal">
+          <div class="timeline-icon">14</div>
+          <div class="timeline-card">
+            <div class="timeline-header">
+              <span class="timeline-act-number">Activity 14</span>
+            </div>
+            <h3 class="timeline-title">Contests & Hackathon Preparation</h3>
+            <p class="timeline-desc">Problem identification and problem statement research before the build phase for Innohacks 4.0 (TeamMatch — Student Team Formation Platform).</p>
+            <div class="timeline-links">
+              <a href="https://github.com/harshavardhannayaka20072007-png/Activity-14-hackathon-preparation" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm">
+                <i class="fa-brands fa-github"></i> Preparation Repository
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       EXPERIENCE & EXTERNAL WORK SECTION
+       ========================================================================== -->
+  <section class="section" id="experience">
+    <div class="container">
+      <div class="section-header text-center reveal">
+        <span class="section-badge"><i class="fa-solid fa-briefcase"></i> Internships & Activities</span>
+        <h2 class="section-title">Experience & External Work</h2>
+      </div>
+
+      <div class="exp-grid">
+        <!-- Experience 1: DecodeLabs Internship -->
+        <div class="exp-card reveal">
+          <div>
+            <span class="exp-type-badge">Virtual Internship</span>
+            <h3 class="exp-role">Data Science Intern</h3>
+            <div class="exp-company">DecodeLabs</div>
+            
+            <div class="exp-meta">
+              <div class="exp-meta-item">
+                <i class="fa-regular fa-calendar"></i> July 30, 2026 – August 30, 2026
+              </div>
+              <div class="exp-meta-item">
+                <i class="fa-solid fa-certificate"></i> Issued: August 31, 2026
+              </div>
+            </div>
+
+            <p class="exp-desc">
+              Participated in a 1-month virtual internship program focusing on practical data science workflows, data cleaning, analysis tasks, and Python data manipulation.
+            </p>
+          </div>
+
+          <div>
+            <a href="https://github.com/harshavardhannayaka20072007-png/DecodeLabs-Internship" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm">
+              <i class="fa-brands fa-github"></i> View Internship Repository
+            </a>
+          </div>
+        </div>
+
+        <!-- Experience 2: SIH 2026 Compact Reference -->
+        <div class="exp-card reveal">
+          <div>
+            <span class="exp-type-badge" style="color: #4F6FAD; background: #DCE6F7;">External Hackathon</span>
+            <h3 class="exp-role">Smart India Hackathon 2026</h3>
+            <div class="exp-company">Innovation Procurement Bridge</div>
+            
+            <div class="exp-meta">
+              <div class="exp-meta-item">
+                <i class="fa-solid fa-users"></i> Team Proposal Project
+              </div>
+            </div>
+
+            <p class="exp-desc">
+              Collaborated on a team proposal for SIH 2026 targeting startup-friendly public procurement mechanisms for the Government of Maharashtra.
+            </p>
+          </div>
+
+          <div>
+            <a href="https://github.com/harshavardhannayaka20072007-png/innovation-procurement-bridge" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm">
+              <i class="fa-brands fa-github"></i> View SIH Repository
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       SKILLS SECTION
+       ========================================================================== -->
+  <section class="section section-alt" id="skills">
+    <div class="container">
+      <div class="section-header text-center reveal">
+        <span class="section-badge"><i class="fa-solid fa-layer-group"></i> Technical Core</span>
+        <h2 class="section-title">Skills</h2>
+      </div>
+
+      <div class="skills-grid">
+        <!-- Group 1: Programming -->
+        <div class="skill-group-card reveal">
+          <div class="skill-group-title">
+            <i class="fa-solid fa-code"></i> Programming
+          </div>
+          <div class="skill-chips-list">
+            <div class="skill-item-chip"><i class="fa-solid fa-terminal"></i> C</div>
+            <div class="skill-item-chip"><i class="fa-brands fa-python"></i> Python</div>
+            <div class="skill-item-chip"><i class="fa-solid fa-code"></i> C++</div>
+          </div>
+        </div>
+
+        <!-- Group 2: Core / Learning -->
+        <div class="skill-group-card reveal">
+          <div class="skill-group-title">
+            <i class="fa-solid fa-brain"></i> Core / Learning
+          </div>
+          <div class="skill-chips-list">
+            <div class="skill-item-chip"><i class="fa-solid fa-cubes"></i> Object-Oriented Programming</div>
+            <div class="skill-item-chip"><i class="fa-solid fa-sitemap"></i> Data Structures in C</div>
+          </div>
+        </div>
+
+        <!-- Group 3: Database -->
+        <div class="skill-group-card reveal">
+          <div class="skill-group-title">
+            <i class="fa-solid fa-database"></i> Database
+          </div>
+          <div class="skill-chips-list">
+            <div class="skill-item-chip"><i class="fa-solid fa-server"></i> MySQL</div>
+          </div>
+        </div>
+
+        <!-- Group 4: Tools -->
+        <div class="skill-group-card reveal">
+          <div class="skill-group-title">
+            <i class="fa-solid fa-wrench"></i> Developer Tools
+          </div>
+          <div class="skill-chips-list">
+            <div class="skill-item-chip"><i class="fa-code-branch"></i> Git</div>
+            <div class="skill-item-chip"><i class="fa-brands fa-github"></i> GitHub</div>
+            <div class="skill-item-chip"><i class="fa-solid fa-file-code"></i> Visual Studio Code</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       CONNECT SECTION
+       ========================================================================== -->
+  <section class="section" id="connect">
+    <div class="container">
+      <div class="section-header text-center reveal">
+        <span class="section-badge"><i class="fa-solid fa-paper-plane"></i> Contact & Links</span>
+        <h2 class="section-title">Connect</h2>
+        <p class="section-description">Official developer profiles and contact information.</p>
+      </div>
+
+      <div class="connect-grid">
+        <!-- LinkedIn -->
+        <a href="https://www.linkedin.com/in/t-s-harshavardhan-nayaka-ab262a393/" target="_blank" rel="noopener noreferrer" class="connect-card reveal">
+          <div class="connect-icon"><i class="fa-brands fa-linkedin-in"></i></div>
+          <div class="connect-info">
+            <span class="connect-platform">LinkedIn</span>
+            <span class="connect-handle">T S Harshavardhan Nayaka</span>
+          </div>
+        </a>
+
+        <!-- GitHub -->
+        <a href="https://github.com/harshavardhannayaka20072007-png" target="_blank" rel="noopener noreferrer" class="connect-card reveal">
+          <div class="connect-icon"><i class="fa-brands fa-github"></i></div>
+          <div class="connect-info">
+            <span class="connect-platform">GitHub</span>
+            <span class="connect-handle">harshavardhannayaka20072007-png</span>
+          </div>
+        </a>
+
+        <!-- LeetCode -->
+        <a href="https://leetcode.com/u/TS_HARSHAVARDHAN/" target="_blank" rel="noopener noreferrer" class="connect-card reveal">
+          <div class="connect-icon"><i class="fa-solid fa-code"></i></div>
+          <div class="connect-info">
+            <span class="connect-platform">LeetCode</span>
+            <span class="connect-handle">TS_HARSHAVARDHAN</span>
+          </div>
+        </a>
+
+        <!-- HackerRank -->
+        <a href="https://www.hackerrank.com/profile/harshavardhann35" target="_blank" rel="noopener noreferrer" class="connect-card reveal">
+          <div class="connect-icon"><i class="fa-brands fa-hackerrank"></i></div>
+          <div class="connect-info">
+            <span class="connect-platform">HackerRank</span>
+            <span class="connect-handle">harshavardhann35</span>
+          </div>
+        </a>
+
+        <!-- Instagram -->
+        <a href="https://www.instagram.com/tsh_tech_07/" target="_blank" rel="noopener noreferrer" class="connect-card reveal">
+          <div class="connect-icon"><i class="fa-brands fa-instagram"></i></div>
+          <div class="connect-info">
+            <span class="connect-platform">Instagram</span>
+            <span class="connect-handle">@tsh_tech_07</span>
+          </div>
+        </a>
+
+        <!-- Email -->
+        <a href="mailto:harshavardhannayaka20072007@gmail.com" class="connect-card reveal">
+          <div class="connect-icon"><i class="fa-solid fa-envelope"></i></div>
+          <div class="connect-info">
+            <span class="connect-platform">Email</span>
+            <span class="connect-handle">harshavardhannayaka20072007@gmail.com</span>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       FOOTER
+       ========================================================================== -->
+  <footer class="footer">
+    <div class="container footer-container">
+      <div>
+        <div class="footer-brand">T S HARSHAVARDHAN NAYAKA</div>
+        <div class="footer-sub">Student Developer | B.Tech CSIT — REVA University</div>
+      </div>
+
+      <div class="footer-links">
+        <a href="https://github.com/harshavardhannayaka20072007-png" target="_blank" rel="noopener noreferrer" class="footer-link" aria-label="GitHub">
+          <i class="fa-brands fa-github"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/t-s-harshavardhan-nayaka-ab262a393/" target="_blank" rel="noopener noreferrer" class="footer-link" aria-label="LinkedIn">
+          <i class="fa-brands fa-linkedin-in"></i>
+        </a>
+        <a href="mailto:harshavardhannayaka20072007@gmail.com" class="footer-link" aria-label="Email">
+          <i class="fa-solid fa-envelope"></i>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==========================================================================
+       JAVASCRIPT
+       ========================================================================== -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // Mobile Hamburger Navigation Toggle
+      const mobileBtn = document.getElementById('mobileMenuBtn');
+      const mobileMenu = document.getElementById('mobileMenu');
+      const mobileLinks = document.querySelectorAll('.mobile-link');
+
+      if (mobileBtn && mobileMenu) {
+        mobileBtn.addEventListener('click', () => {
+          mobileMenu.classList.toggle('open');
+          const isOpen = mobileMenu.classList.contains('open');
+          mobileBtn.innerHTML = isOpen ? '<i class="fa-solid fa-xmark"></i>' : '<i class="fa-solid fa-bars"></i>';
+        });
+
+        mobileLinks.forEach(link => {
+          link.addEventListener('click', () => {
+            mobileMenu.classList.remove('open');
+            mobileBtn.innerHTML = '<i class="fa-solid fa-bars"></i>';
+          });
+        });
+      }
+
+      // Active Navbar Navigation Link Highlighting on Scroll
+      const sections = document.querySelectorAll('section[id]');
+      const navLinks = document.querySelectorAll('.nav-link');
+
+      function highlightNavOnScroll() {
+        const scrollY = window.pageYOffset;
+
+        sections.forEach(current => {
+          const sectionHeight = current.offsetHeight;
+          const sectionTop = current.offsetTop - 100;
+          const sectionId = current.getAttribute('id');
+
+          if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
+            navLinks.forEach(link => {
+              link.classList.remove('active');
+              if (link.getAttribute('href') === '#' + sectionId) {
+                link.classList.add('active');
+              }
+            });
+          }
+        });
+      }
+
+      window.addEventListener('scroll', highlightNavOnScroll);
+
+      // Scroll Reveal Animation via IntersectionObserver
+      const revealElements = document.querySelectorAll('.reveal');
+      const revealObserver = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('active');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, {
+        root: null,
+        threshold: 0.12
+      });
+
+      revealElements.forEach(el => revealObserver.observe(el));
+    });
+  </script>
+</body>
+</html>

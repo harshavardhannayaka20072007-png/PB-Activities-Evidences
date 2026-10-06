@@ -1,0 +1,256 @@
+Create a clean, modern, professional one-page personal portfolio website for me based only on the information provided below.
+
+Do not invent or assume any information that I have not provided.
+
+==============================
+PERSONAL INFORMATION
+====================
+
+Name: T S Harshavardhan Nayaka
+
+Course: B.Tech CSE / CSIT
+
+Semester: 3rd Semester
+
+University: REVA University
+
+==============================
+ABOUT ME
+========
+
+I am a third-semester Computer Science student at REVA University. I am currently building stronger programming skills and becoming more confident in developing real-world projects.
+
+I am learning programming, problem solving, development tools, Git and GitHub, and practicing coding problems through LeetCode.
+
+Keep the About section simple, genuine, and student-focused.
+
+Do not describe me as an experienced professional or expert.
+
+==============================
+ACTIVITIES AND PROJECTS
+=======================
+
+The portfolio must accurately represent the work I completed during my Portfolio Building activities.
+
+PROJECT 1 — Development Environment and VS Code Setup
+
+I learned and set up my development environment using Visual Studio Code and explored the basic tools required for programming and development.
+
+PROJECT 2 — Git and GitHub
+
+I learned the basics of Git and GitHub and created a GitHub repository for my first C programming activity.
+
+Repository name:
+hello-world-c
+
+Repository link:
+https://github.com/harshavardhannayaka20072007-png/hello-world-c
+
+The repository contains my Hello World program in C.
+
+PROJECT 3 — GitLens and Live Share
+
+I explored GitLens and Live Share in Visual Studio Code to understand Git-related features and collaborative development workflows.
+
+PROJECT 4 — LeetCode Practice
+
+I created and worked on a LeetCode practice repository where I organize my coding solutions and practice problem solving using C.
+
+Repository name:
+leetcode-solutions
+
+Repository link:
+https://github.com/harshavardhannayaka20072007-png/leetcode-solutions
+
+==============================
+SKILLS
+======
+
+Only include skills supported by the information provided:
+
+* C programming fundamentals
+* Problem solving and logical thinking
+* Visual Studio Code
+* Git
+* GitHub
+* GitLens
+* Live Share
+* LeetCode problem solving
+* Basic software development workflow
+
+Do not exaggerate my skill level.
+
+Do not describe me as an expert in any of these skills.
+
+==============================
+CAREER / LEARNING GOAL
+======================
+
+My current learning goal is:
+
+"Build stronger programming skills and become more confident in developing real-world projects."
+
+Present this as a learning goal rather than claiming that I have already achieved it.
+
+==============================
+REQUIRED WEBSITE SECTIONS
+=========================
+
+Create a single-page portfolio website containing these sections:
+
+1. Home / Hero
+2. About
+3. Projects / Activities
+4. Skills
+5. Learning Goal
+6. Contact
+
+==============================
+PROJECTS / ACTIVITIES SECTION
+=============================
+
+Clearly display the four activities/projects listed above.
+
+For the GitHub-based activities, make the repository names clickable and link them to the exact URLs provided.
+
+Use these exact links:
+
+hello-world-c:
+https://github.com/harshavardhannayaka20072007-png/hello-world-c
+
+leetcode-solutions:
+https://github.com/harshavardhannayaka20072007-png/leetcode-solutions
+
+Do not change, shorten, or invent these URLs.
+
+==============================
+CONTACT SECTION
+===============
+
+Create a simple Contact section.
+
+Do not invent an email address, phone number, LinkedIn URL, or other personal contact information.
+
+If contact information is required for the layout, use a neutral placeholder such as:
+
+"Contact information can be added here."
+
+Do not create fake contact details.
+
+==============================
+DESIGN AND STYLE
+================
+
+Create a clean and modern student portfolio.
+
+Design requirements:
+
+* Professional but student-friendly
+* Simple and easy to understand
+* Clean layout
+* Good spacing between sections
+* Clear headings
+* Readable typography
+* Consistent color scheme
+* Professional visual appearance
+* Responsive design for desktop and mobile
+* Subtle animations only where appropriate
+* Avoid excessive animations or visual effects
+* Avoid unnecessary decorative elements
+* Make the GitHub project links easy to identify and click
+
+The website should look like a genuine student portfolio rather than a corporate company website.
+
+==============================
+CONTENT ACCURACY RULES
+======================
+
+These rules are extremely important:
+
+1. Use ONLY the information provided in this prompt.
+
+2. Do not invent:
+
+   * internships
+   * jobs
+   * professional experience
+   * certifications
+   * awards
+   * achievements
+   * extra projects
+   * companies
+   * clients
+   * testimonials
+   * statistics
+   * programming languages that were not mentioned
+   * technical expertise that was not mentioned
+
+3. Do not use generic claims such as:
+
+   * "passionate full-stack developer"
+   * "highly experienced developer"
+   * "industry expert"
+   * "professional software engineer"
+
+   unless they are directly supported by the information provided. They are NOT supported here, so do not use them.
+
+4. Do not exaggerate my experience or skill level.
+
+5. Keep all project descriptions factually accurate.
+
+6. Keep both GitHub repository URLs exactly as provided.
+
+7. Do not create a fake LeetCode profile URL.
+
+8. Do not create fake contact information.
+
+9. If information is missing, do not guess. Use a clear placeholder or leave that information out.
+
+==============================
+TECHNICAL OUTPUT REQUIREMENTS
+=============================
+
+Generate a complete, self-contained file named:
+
+index.html
+
+The file must contain the complete portfolio website.
+
+Include:
+
+* HTML
+* CSS
+* JavaScript only if necessary
+
+Keep everything inside the single HTML file.
+
+Do not require:
+
+* a backend
+* a database
+* a server
+* a build process
+* npm
+* any framework that requires installation
+
+The final file should be directly usable as a GitHub Pages website.
+
+Do not ask me to manually write or edit HTML/CSS code.
+
+==============================
+FINAL OUTPUT
+============
+
+After understanding all the requirements, generate the complete index.html file for the portfolio.
+
+Before generating it, carefully check that:
+
+* My name is correct.
+* My course and semester are correct.
+* The four activities are represented accurately.
+* Both GitHub repository links are correct.
+* No fake information has been added.
+* The learning goal is included.
+* The website contains About, Projects, Skills, Learning Goal, and Contact sections.
+* The design is professional and suitable for a third-semester student.
+* The page is responsive.
